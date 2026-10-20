@@ -1,0 +1,16 @@
+{
+  "description": "Reminds about missing test coverage after writing or editing source files",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/test_reminder_hook.py"
+          }
+        ],
+        "matcher": "Edit|Write|MultiEdit"
+      }
+    ]
+  }
+}

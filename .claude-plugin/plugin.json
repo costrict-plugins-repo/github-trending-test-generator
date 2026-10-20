@@ -1,0 +1,7 @@
+{
+  "name": "test-generator",
+  "description": "Auto-generates test files when you write new code. Detects your test framework (RSpec, pytest, Jest, Vitest, PHPUnit, Go testing, ExUnit), scaffolds tests with edge cases, and reminds you when source files lack test coverage.",
+  "author": {
+    "name": "Ahmed"
+  }
+}
