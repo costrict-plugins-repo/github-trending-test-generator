@@ -1,0 +1,23 @@
+{
+  "name": "test-generator",
+  "description": "Generates test files for code that lacks coverage. Detects your test framework (RSpec, Minitest, pytest, Jest, Vitest, PHPUnit, Go testing, ExUnit), scaffolds tests with edge cases, and suggests tests when source files have none",
+  "version": "1.1.0",
+  "author": {
+    "name": "Ahmed",
+    "email": "ahmed.abdelatife@gmail.com"
+  },
+  "homepage": "https://github.com/a-abdellatif98/test-generator",
+  "repository": "https://github.com/a-abdellatif98/test-generator",
+  "license": "MIT",
+  "icon": "assets/icon.svg",
+  "keywords": [
+    "coverage",
+    "django",
+    "jest",
+    "pytest",
+    "rails",
+    "rspec",
+    "testing",
+    "unit-tests"
+  ]
+}

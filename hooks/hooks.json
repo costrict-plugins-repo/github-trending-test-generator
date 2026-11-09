@@ -1,0 +1,18 @@
+{
+  "description": "Reminds about missing test coverage after writing or editing source files",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are a test coverage reminder. Hook input: $ARGUMENTS\n\n1. If the new text (tool_input.content, tool_input.new_string or tool_input.edits[].new_string) contains the comment test-generator: skip, respond {\"ok\": true}.\n2. Look at tool_input.file_path. If it is itself a test (_spec.rb, _test.rb, _test.go, _test.exs, .test.* or .spec.* JS/TS, test_*.py, *Test.php, or under spec/, test/, tests/, __tests__/), a config, migration, lock, docs or data file (md, json, yml, yaml, toml), or vendored code, respond {\"ok\": true}.\n3. Otherwise, if it is application source code (Ruby, Python, JS/TS, Go, PHP, Elixir), respond {\"ok\": true} when a matching test file for it was already created or edited in this conversation.\n4. If no matching test is known, respond {\"ok\": true, \"reason\": \"No test seen for <file>. Run /generate-tests <file> to create one.\"}\n\nRespond with the JSON object only.",
+            "timeout": 30,
+            "continueOnBlock": true
+          }
+        ]
+      }
+    ]
+  }
+}
